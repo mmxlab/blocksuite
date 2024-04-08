@@ -416,8 +416,14 @@ export class PageRootBlockComponent extends BlockElement<
       ([_, widget]) => widget
     )}`;
 
+    console.log(widgets);
+
     return html`
-      <div class="affine-page-root-block-container">${content} ${widgets}</div>
+      <div class="affine-page-root-block-container">
+        ${content}
+        <div>+add note</div>
+        ${widgets}
+      </div>
     `;
   }
 }

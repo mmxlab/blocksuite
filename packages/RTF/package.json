@@ -1,0 +1,48 @@
+{
+  "name": "@beelite/RTF",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "repository": "toeverything/blocksuite",
+  "main": "./dist/RTF.js",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:hmr": "WC_HMR=1 vite",
+    "build:lib": "tsc && vite build -c vite.config.lib.ts",
+    "build": "tsc && vite build",
+    "build:size": "vite build -c vite.config.size.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@blocksuite/block-std": "workspace:*",
+    "@blocksuite/blocks": "workspace:*",
+    "@blocksuite/global": "workspace:*",
+    "@blocksuite/inline": "workspace:*",
+    "@blocksuite/presets": "workspace:*",
+    "@blocksuite/store": "workspace:*",
+    "@blocksuite/sync": "workspace:*",
+    "@shoelace-style/shoelace": "2.14.0",
+    "@toeverything/y-indexeddb": "0.10.0-canary.9",
+    "@types/katex": "^0.16.7",
+    "browser-fs-access": "^0.35.0",
+    "intl-segmenter-polyfill-rs": "^0.1.7",
+    "jszip": "^3.10.1",
+    "katex": "^0.16.10",
+    "lit": "^3.1.2",
+    "lz-string": "^1.5.0",
+    "merge": "^2.1.1",
+    "tweakpane": "^4.0.3",
+    "y-indexeddb": "^9.0.12",
+    "y-protocols": "^1.0.6",
+    "yjs": "^13.6.14",
+    "zod": "^3.22.4"
+  },
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@tweakpane/core": "^2.0.3",
+    "@types/micromatch": "^4.0.6",
+    "magic-string": "^0.30.8",
+    "vite-plugin-wasm": "^3.3.0",
+    "idb": "8.0.0"
+  }
+}

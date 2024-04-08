@@ -160,6 +160,7 @@ export class EditorHost extends WithDisposable(ShadowlessElement) {
           };
         }, {})
       : {};
+    console.log('就是这边，插入 widget', widgets, flavour, this.specs);
 
     return html`<${tag}
       ${unsafeStatic(this.blockIdAttr)}=${model.id}

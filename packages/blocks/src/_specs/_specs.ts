@@ -63,6 +63,8 @@ const DocPageSpec: BlockSpec<PageRootBlockWidgetName> = {
       // [AFFINE_BLOCK_HUB_WIDGET]: literal`${unsafeStatic(
       //   AFFINE_BLOCK_HUB_WIDGET
       // )}`,
+      // 需要在此处添加widget
+
       [AFFINE_MODAL_WIDGET]: literal`${unsafeStatic(AFFINE_MODAL_WIDGET)}`,
       [AFFINE_INNER_MODAL_WIDGET]: literal`${unsafeStatic(AFFINE_INNER_MODAL_WIDGET)}`,
       [AFFINE_SLASH_MENU_WIDGET]: literal`${unsafeStatic(
