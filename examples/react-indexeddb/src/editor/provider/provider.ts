@@ -65,7 +65,11 @@ export class CollectionProvider {
 
   private async _applyUpdates(doc: Y.Doc) {
     const updates = await client.getUpdates(doc.guid);
-    updates.forEach(update => {
+    console.log(updates, doc);
+    updates.forEach((update, i) => {
+      if (i > 10) {
+        return;
+      }
       DocCollection.Y.applyUpdate(doc, update);
     });
   }

@@ -174,13 +174,15 @@ export class TestRichText extends ShadowlessElement {
     this.inlineEditor.slots.textChange.on(() => {
       const el = this.querySelector('.y-text');
       if (el) {
+        // TODO:将所有操作合并，需要将其改成增量更新
         const text = this.inlineEditor.yText.toDelta();
+        console.log(text);
         const span = document.createElement('span');
         span.innerHTML = JSON.stringify(text);
         el.replaceChildren(span);
       }
     });
-    this.inlineEditor.slots.inlineRangeUpdate.on(() => {
+    this.inlineEditor.slots.inlineRangeUpdate.on(a => {
       const el = this.querySelector('.v-range');
       if (el) {
         const inlineRange = this.inlineEditor.getInlineRange();
@@ -240,12 +242,12 @@ export class TestRichText extends ShadowlessElement {
 }
 
 const TEXT_ID = 'inline-editor';
-const yDocA = new Y.Doc();
+export const yDocA = new Y.Doc();
 const yDocB = new Y.Doc();
 
-yDocA.on('update', update => {
-  Y.applyUpdate(yDocB, update);
-});
+// yDocA.on('update', update => {
+//   Y.applyUpdate(yDocB, update);
+// });
 
 yDocB.on('update', update => {
   Y.applyUpdate(yDocA, update);
